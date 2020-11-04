@@ -1,0 +1,9 @@
+Starting development
+
+Installing dependencies
+
+docker-compose run node yarn install
+
+Starting development server with reload
+
+docker-compose run node yarn start
