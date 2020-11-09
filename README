@@ -1,5 +1,10 @@
 Starting development
 
+Preparation:
+Creating docker volume for yarn cache
+
+docker volume create --name=yarncache
+
 Installing dependencies
 
 docker-compose run node yarn install

@@ -1,14 +1,17 @@
 version: "2"
 services:
   node:
-    image: "node:10"
-    user: "node"
+    image: "node"
+    user: "root"
     working_dir: /home/node/app
     environment:
       - NODE_ENV=production
     volumes:
-      - ./vapp:/home/node/app
+      - yarncache:/usr/local/share/.cache/yarn/v6
     expose:
       - "8081"
       - "3000"
-    command: "npm start"
+    command: "yarn build"
+volumes:
+  yarncache:
+    external: true
