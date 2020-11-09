@@ -7,6 +7,7 @@ services:
     environment:
       - NODE_ENV=production
     volumes:
+      - ./vapp:/home/node/app
       - yarncache:/usr/local/share/.cache/yarn/v6
     expose:
       - "8081"
